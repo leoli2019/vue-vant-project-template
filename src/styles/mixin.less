@@ -1,0 +1,23 @@
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.sc(@size, @color) {
+  font-size: @size;
+  color: @color;
+}
+
+.hl(@param) {
+  height: @param;
+  line-height: @param;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
