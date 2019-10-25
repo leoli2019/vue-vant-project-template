@@ -1,8 +1,7 @@
-/*1.调整盒子大小*/
+// 1.调整盒子大小
 html {
   box-sizing: border-box;
   font-family: -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Arial, sans-serif;
-  font-size: 625%;
 }
 
 *,
@@ -11,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/*2.删除边距和填充*/
+// 2.删除边距和填充
 body,
 ol,
 ul,
@@ -36,26 +35,28 @@ select {
   padding: 0;
 }
 
-/*3.列表*/
+// 3.列表
 ul,
 ol,
 dl {
   list-style: none;
 }
 
-/*4.表单和按钮*/
+// 4.表单和按钮
 input,
 textarea,
 select,
 button {
   outline: none;
+  margin: 0;
 }
 
-/*5.字体*/
-body {
-  font-size: 0.12rem;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+// 5.字体
 a {
   text-decoration: none;
   color: #000;
@@ -78,7 +79,18 @@ h5,
 h6,
 b,
 strong {
-  font-weight: 100;
+  font-weight: normal;
+}
+
+// 6.其他
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
 }
 
 [hidden] {
