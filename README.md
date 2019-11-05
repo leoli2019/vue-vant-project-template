@@ -10,7 +10,7 @@
 * vant-ui 按需加载
 * axios 请求封装
 * vue cli3 构建
-* esint + prettier 代码校验
+* eslint + prettier 代码校验
 * 根据环境打包生成不同目录
 * 代码拆包
 * gzip压缩
