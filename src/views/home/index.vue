@@ -1,0 +1,47 @@
+<template>
+  <section class="home">
+    <van-cell-group title="vant组件例子">
+      <van-cell title="商品详情" is-link to="goods" />
+      <van-cell title="购物车" is-link to="cart" />
+      <van-cell title="用户中心" is-link to="user" />
+    </van-cell-group>
+    <van-cell-group title="请求接口例子">
+      <van-cell title="请求接口" is-link to="request" />
+    </van-cell-group>
+    <h1>
+      <a href="https://github.com/wuyiya/vue-vant-project-template" target="_blank">@vue-vant-project-template</a>
+    </h1>
+  </section>
+</template>
+
+<script>
+import { Cell, CellGroup } from 'vant'
+export default {
+  name: 'home',
+  data() {
+    return {}
+  },
+  components: {
+    [Cell.name]: Cell,
+    [CellGroup.name]: CellGroup
+  },
+  watch: {},
+  mounted() {},
+  methods: {}
+}
+</script>
+
+<style scoped lang="less">
+.home {
+  min-height: 100%;
+  h1 {
+    .tc();
+    .sc(12px, #969799);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+</style>

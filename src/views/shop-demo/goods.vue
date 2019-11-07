@@ -1,5 +1,6 @@
 <template>
   <div class="goods">
+    <goBack title="商品详情" />
     <van-swipe class="goods-swipe" :autoplay="3000">
       <van-swipe-item v-for="thumb in goods.thumb" :key="thumb">
         <img :src="thumb" />
@@ -42,6 +43,7 @@
 
 <script>
 import {
+  NavBar,
   Tag,
   Col,
   Icon,
@@ -54,9 +56,11 @@ import {
   GoodsActionIcon,
   GoodsActionButton
 } from 'vant'
-
+import goBack from '@/components/goBack'
 export default {
   components: {
+    goBack,
+    [NavBar.name]: NavBar,
     [Tag.name]: Tag,
     [Col.name]: Col,
     [Icon.name]: Icon,

@@ -1,19 +1,22 @@
 <template>
   <div>
     <div class="goback">
-      <el-button @click="goBack">{{ text }}</el-button>
+      <van-nav-bar :title="title" left-text="返回" left-arrow @click-left="goBack" />
     </div>
-    <hr />
   </div>
 </template>
 
 <script>
+import { NavBar } from 'vant'
 export default {
   name: 'goBack',
+  components: {
+    [NavBar.name]: NavBar
+  },
   props: {
-    text: {
+    title: {
       type: String,
-      default: '返回上一页'
+      default: ''
     }
   },
   methods: {
@@ -23,15 +26,3 @@ export default {
   }
 }
 </script>
-
-<style scoped lang="scss">
-.goback {
-  @include clearfix;
-  button {
-    float: left;
-  }
-}
-hr {
-  margin: 20px 0;
-}
-</style>

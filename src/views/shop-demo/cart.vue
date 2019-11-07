@@ -1,5 +1,6 @@
 <template>
   <div>
+    <goBack title="购物车" />
     <van-checkbox-group class="card-goods" v-model="checkedGoods">
       <van-checkbox class="card-goods__item" v-for="item in goods" :key="item.id" :name="item.id">
         <van-card
@@ -22,9 +23,10 @@
 
 <script>
 import { Checkbox, CheckboxGroup, Card, SubmitBar, Toast } from 'vant'
-
+import goBack from '@/components/goBack'
 export default {
   components: {
+    goBack,
     [Card.name]: Card,
     [Checkbox.name]: Checkbox,
     [SubmitBar.name]: SubmitBar,

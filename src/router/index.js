@@ -7,18 +7,28 @@ Vue.use(Router)
 import { baseTitle } from '@/config'
 
 /* Router Modules */
-import goodsModule from './modules/goods'
-import cartModule from './modules/cart'
-import userModule from './modules/user'
+import vantDemoModule from './modules/vant-demo'
 
 const routes = [
   {
-    path: '*',
-    redirect: '/goods'
+    name: 'home',
+    meta: {
+      title: 'vue-vant-project-template'
+    },
+    component: () => import('@/views/home')
   },
-  goodsModule,
-  cartModule,
-  userModule
+  {
+    name: 'request',
+    meta: {
+      title: '请求数据'
+    },
+    component: () => import('@/views/request-demo')
+  },
+  ...vantDemoModule,
+  {
+    path: '*',
+    redirect: '/home'
+  }
 ]
 
 // 根据 name 设置 path 参数
