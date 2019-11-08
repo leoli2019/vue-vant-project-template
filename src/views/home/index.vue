@@ -12,7 +12,10 @@
       <van-cell title="vuex" is-link to="vuex" />
     </van-cell-group>
     <h1>
-      <a href="https://github.com/wuyiya/vue-vant-project-template" target="_blank">@vue-vant-project-template</a>
+      <a
+        href="https://github.com/wuyiya/vue-vant-project-template"
+        target="_blank"
+      >@vue-vant-project-template</a>
     </h1>
   </section>
 </template>
@@ -39,12 +42,14 @@ export default {
   min-height: 100%;
   h1 {
     .tc();
-    .sc(12px, #969799);
     padding: 10px;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+    a {
+      .sc(12px, #969799);
+    }
   }
 }
 </style>
