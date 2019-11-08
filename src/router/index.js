@@ -6,7 +6,7 @@ Vue.use(Router)
 // 全局配置的页面默认title
 import { baseTitle } from '@/config'
 
-/* Router Modules */
+// 路由模块引入
 import vantDemoModule from './modules/vant-demo'
 
 const routes = [
@@ -20,9 +20,16 @@ const routes = [
   {
     name: 'request',
     meta: {
-      title: '请求数据'
+      title: '请求数据示例'
     },
     component: () => import('@/views/request-demo')
+  },
+  {
+    name: 'vuex',
+    meta: {
+      title: 'vuex示例'
+    },
+    component: () => import('@/views/vuex-demo')
   },
   ...vantDemoModule,
   {
@@ -36,7 +43,7 @@ routes.forEach(route => {
   route.path = route.path || '/' + (route.name || '')
 })
 
-// 实例化理由
+// 构建路由
 const router = new Router({
   mode: 'hash',
   base: process.env.BASE_URL,

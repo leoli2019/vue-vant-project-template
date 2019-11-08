@@ -1,12 +1,15 @@
 <template>
   <section class="home">
-    <van-cell-group title="vant组件例子">
+    <van-cell-group title="vant组件示例">
       <van-cell title="商品详情" is-link to="goods" />
       <van-cell title="购物车" is-link to="cart" />
       <van-cell title="用户中心" is-link to="user" />
     </van-cell-group>
-    <van-cell-group title="请求接口例子">
+    <van-cell-group title="请求接口示例">
       <van-cell title="请求接口" is-link to="request" />
+    </van-cell-group>
+    <van-cell-group title="vuex示例">
+      <van-cell title="vuex" is-link to="vuex" />
     </van-cell-group>
     <h1>
       <a href="https://github.com/wuyiya/vue-vant-project-template" target="_blank">@vue-vant-project-template</a>

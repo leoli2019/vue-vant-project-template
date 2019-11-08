@@ -4,21 +4,21 @@ const vantDemoModule = [
     meta: {
       title: '购物车'
     },
-    component: () => import('@/views/shop-demo/cart')
+    component: () => import('@/views/vant-demo/cart')
   },
   {
     name: 'goods',
     meta: {
       title: '商品详情'
     },
-    component: () => import('@/views/shop-demo/goods')
+    component: () => import('@/views/vant-demo/goods')
   },
   {
     name: 'user',
     meta: {
       title: '会员中心'
     },
-    component: () => import('@/views/shop-demo/user')
+    component: () => import('@/views/vant-demo/user')
   }
 ]
 export default vantDemoModule

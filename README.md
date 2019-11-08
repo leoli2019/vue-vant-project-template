@@ -54,7 +54,6 @@
 │ │ ├─index.js 
 │ │ └─modules 
 │ │   └─app.js 
-│ ├─directive ------------------- // 自定义指令
 │ │ └─waves 
 │ ├─styles ---------------------- // 全局样式
 │ │ ├─btn.scss 
