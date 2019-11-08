@@ -35,13 +35,10 @@ export default {
     ...mapGetters(['storeCount'])
   },
   methods: {
-    ...mapMutations([
-      'ADD_COUNT', // 将 `this.ADD_COUNT()` 映射为 `this.$store.commit('ADD_COUNT')`
-      'RESET_COUNT'
-    ]),
-    ...mapActions([
-      'incrementAsync' // 将 `this.incrementAsync()` 映射为 `this.$store.dispatch('incrementAsync')`
-    ]),
+    // 将 `this.ADD_COUNT()` 映射为 `this.$store.commit('ADD_COUNT')`
+    ...mapMutations(['ADD_COUNT', 'RESET_COUNT']),
+    // 将 `this.incrementAsync()` 映射为 `this.$store.dispatch('incrementAsync')`
+    ...mapActions(['incrementAsync']),
     addCountAsync() {
       this.requesting = true
       this.incrementAsync(this.value).then(() => {
