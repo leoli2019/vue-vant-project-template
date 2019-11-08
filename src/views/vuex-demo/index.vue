@@ -4,7 +4,7 @@
     <div class="p-15">
       <div>{{ storeCount }}</div>
       <van-button class="store-btn" type="default" @click="ADD_COUNT(value)">同步增加</van-button>
-      <van-button v-if="requesting" type="default" loading loading-text="异步ing..." />
+      <van-button v-if="requesting" type="default" loading />
       <van-button v-else type="default" :loading="requesting" @click="addCountAsync">异步增加</van-button>
       <van-button class="store-btn" type="warning" @click="RESET_COUNT">重置</van-button>
       <p>请输入增加的值，默认为1</p>
