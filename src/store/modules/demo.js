@@ -1,4 +1,4 @@
-import { ADD_COUNT } from '../mutation-types'
+import { ADD_COUNT, RESET_COUNT } from '../mutation-types'
 
 const state = {
   count: 0
@@ -12,6 +12,9 @@ const mutations = {
     } else {
       state.count++
     }
+  },
+  [RESET_COUNT](state) {
+    state.count = 0
   }
 }
 
