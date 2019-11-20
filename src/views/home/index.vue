@@ -12,10 +12,7 @@
       <van-cell title="vuex" is-link to="vuex" />
     </van-cell-group>
     <h1>
-      <a
-        href="https://github.com/wuyiya/vue-vant-project-template"
-        target="_blank"
-      >@vue-vant-project-template</a>
+      <a href="https://github.com/wuyiya/vue-vant-project-template" target="_blank">@vue-vant-project-template</a>
     </h1>
   </section>
 </template>
