@@ -14,7 +14,7 @@ import vantDemoModule from './modules/vant-demo'
 
 const routes = [
   {
-    name: 'home',
+    path: '/',
     meta: {
       title: 'vue-vant-project-template'
     },
@@ -37,7 +37,7 @@ const routes = [
   ...vantDemoModule,
   {
     path: '*',
-    redirect: '/home'
+    redirect: '/'
   }
 ]
 
