@@ -3,13 +3,11 @@ const path = require('path')
 const pxtoviewport = require('postcss-px-to-viewport')
 const CompressionWebpackPlugin = require('compression-webpack-plugin') // gzip压缩
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i // gzip匹配文件规则
-const isProduction = process.env.NODE_ENV === 'production'
+const NOT_DEV = process.env.NODE_ENV !== 'development'
 
 const globalConfig = require('./src/config/index.js') //全局配置
 
-function resolve(dir) {
-  return path.join(__dirname, dir)
-}
+const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
   // 打包输出文件夹名字
@@ -36,6 +34,17 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+    config.resolve.alias
+      .set('@', resolve('src'))
+      .set('@api', resolve('src/api'))
+      .set('@assets', resolve('src/assets'))
+      .set('@components', resolve('src/components'))
+      .set('@mixins', resolve('src/mixins'))
+      .set('@plugins', resolve('src/plugins'))
+      .set('@router', resolve('src/router'))
+      .set('@store', resolve('src/store'))
+      .set('@utils', resolve('src/utils'))
+      .set('@views', resolve('src/views'))
     // lodash打包优化
     config.module
       .rule('js')
@@ -73,7 +82,7 @@ module.exports = {
   configureWebpack: config => {
     config.name = globalConfig.baseTitle //用于设置public/index.html的默认title
     const plugins = []
-    if (isProduction) {
+    if (NOT_DEV) {
       plugins.push(
         new CompressionWebpackPlugin({
           filename: '[path].gz[query]',

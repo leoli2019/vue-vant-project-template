@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import goBack from '@/components/goBack'
+import goBack from '@components/goBack'
 import { Button, Field } from 'vant'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {

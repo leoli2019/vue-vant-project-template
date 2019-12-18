@@ -16,9 +16,9 @@
 
 <script>
 import _ from 'lodash'
-import goBack from '@/components/goBack'
+import goBack from '@components/goBack'
 import { Button, Panel, Loading } from 'vant'
-import { getList } from '@/api/api-test'
+import { getList } from '@api/api-test'
 
 export default {
   name: 'request',

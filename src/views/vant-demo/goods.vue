@@ -43,7 +43,7 @@
 
 <script>
 import { NavBar, Tag, Col, Icon, Cell, CellGroup, Swipe, Toast, SwipeItem, GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant'
-import goBack from '@/components/goBack'
+import goBack from '@components/goBack'
 export default {
   components: {
     goBack,

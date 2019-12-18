@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // home
-import home from '@/views/home'
+import home from '@views/home'
 
 // 全局配置的页面默认title
 import { baseTitle } from '@/config'

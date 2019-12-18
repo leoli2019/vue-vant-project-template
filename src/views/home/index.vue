@@ -37,6 +37,8 @@ export default {
 <style scoped lang="less">
 .home {
   min-height: 100%;
+  position: relative;
+  padding-bottom: 50px;
   h1 {
     .tc();
     padding: 10px;

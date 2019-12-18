@@ -12,7 +12,7 @@
 
 <script>
 import { Checkbox, CheckboxGroup, Card, SubmitBar, Toast } from 'vant'
-import goBack from '@/components/goBack'
+import goBack from '@components/goBack'
 export default {
   components: {
     goBack,

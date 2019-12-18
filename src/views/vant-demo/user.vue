@@ -23,7 +23,7 @@
 
 <script>
 import { Row, Col, Icon, Cell, CellGroup } from 'vant'
-import goBack from '@/components/goBack'
+import goBack from '@components/goBack'
 
 export default {
   components: {
