@@ -5,7 +5,6 @@ import { getToken } from '@utils/auth'
 
 const SUCCESS_CODE = 1
 
-console.log(process.env)
 // 创建axios实例
 const axiosInstance = axios.create({
   baseURL: process.env.VUE_APP_BASE_API_HOST,
